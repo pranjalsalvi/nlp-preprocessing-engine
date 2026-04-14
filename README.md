@@ -38,15 +38,6 @@ nlp-preprocessing-engine/
 └── .gitignore                       # Ignored files
 ```
 
-## 🧪 Sample Input
-Get 100% FREE access now!!!
-I absolutely looooved this product 😍😍
-Worst service ever... 0/10
-Visit https://openai.com now!
-Nooooo this is baaad!!!
-OK OK OK I got it
-Win $$$ now!!! Limited offer!!!
-
 ## 🔧 Core Functions
 1. Text Preprocessing
 ```
