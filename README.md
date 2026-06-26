@@ -1,95 +1,256 @@
-# 🧠 NLP Preprocessing Engine
+# 🧠 NLP Preprocessing Engine | Text Cleaning & Normalization Pipeline
 
-A robust and modular NLP preprocessing pipeline designed to clean, normalize, and analyze real-world noisy text data. This project is built as part of a Data Science Internship assignment.
+> **A modular Natural Language Processing (NLP) preprocessing engine built in Python to transform noisy, unstructured text into clean, machine-learning-ready data through efficient text normalization, tokenization, and analysis.**
 
-## 🚀 Project Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![NLP](https://img.shields.io/badge/NLP-Text%20Processing-green)
+![Regex](https://img.shields.io/badge/Regular%20Expressions-Text%20Cleaning-orange)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
 
-Raw text data from real-world sources is often messy and unstructured.  
-This project builds a **cleaning and preprocessing engine** that converts noisy text into meaningful tokens suitable for Machine Learning and NLP tasks.
+---
 
-## 🎯 Objectives
+## 📖 Project Overview
 
-- Clean and normalize raw text data  
-- Handle noisy patterns like emojis, URLs, and numbers  
-- Convert text into structured tokens  
-- Perform token-level analysis  
-- Build a reusable NLP preprocessing pipeline  
+Raw textual data collected from social media, customer reviews, chat logs, and online platforms often contains noise such as emojis, URLs, repeated characters, numbers, punctuation, and inconsistent formatting.
 
-## ⚙️ Features
+This project implements a reusable **Natural Language Processing (NLP) preprocessing pipeline** that systematically cleans and normalizes raw text into structured tokens suitable for downstream tasks such as sentiment analysis, text classification, topic modeling, and machine learning.
 
-- Remove numbers from text  
-- Convert text to lowercase  
-- Remove URLs and email patterns  
-- Handle repeated characters (soooo → soo)  
-- Remove extra spaces  
-- Remove very short tokens (≤2 characters except "no", "not")  
-- Clean emojis and special characters  
-- Tokenization and normalization  
-- Frequency and statistical analysis  
+The pipeline is designed to be modular, efficient, and easily integrated into larger NLP workflows.
 
-## 📁 Project Structure
+---
 
+## 🎯 Project Objectives
+
+* Clean and normalize raw text data
+* Remove noisy and irrelevant content
+* Generate structured tokens for NLP tasks
+* Perform token-level statistical analysis
+* Build a reusable preprocessing pipeline for future projects
+
+---
+
+## ✨ Key Features
+
+### Text Cleaning
+
+* Convert text to lowercase
+* Remove URLs and email addresses
+* Remove numbers and unwanted symbols
+* Remove emojis and special characters
+* Normalize whitespace
+
+### Text Normalization
+
+* Handle repeated characters
+* Remove unnecessary punctuation
+* Filter short tokens (while preserving important words such as *no* and *not*)
+* Standardize text formatting
+
+### Tokenization
+
+* Split cleaned text into meaningful tokens
+* Prepare data for NLP and Machine Learning pipelines
+
+### Text Analytics
+
+* Token frequency analysis
+* Vocabulary statistics
+* Average token length
+* Most frequent and least frequent words
+
+---
+
+## 🏗️ Processing Pipeline
+
+```text
+Raw Text
+    │
+    ▼
+Lowercase Conversion
+    │
+    ▼
+Remove URLs & Emails
+    │
+    ▼
+Remove Numbers
+    │
+    ▼
+Remove Emojis & Special Characters
+    │
+    ▼
+Normalize Repeated Characters
+    │
+    ▼
+Remove Extra Spaces
+    │
+    ▼
+Tokenization
+    │
+    ▼
+Statistical Analysis
 ```
+
+---
+
+## 🛠️ Technology Stack
+
+| Category                | Technologies                    |
+| ----------------------- | ------------------------------- |
+| Programming Language    | Python                          |
+| Text Processing         | Regular Expressions (re)        |
+| Data Structures         | Collections (Counter)           |
+| Development Environment | Jupyter Notebook / Google Colab |
+
+---
+
+## 📂 Project Structure
+
+```text
 nlp-preprocessing-engine/
 │
-├── NLP_Preprocessing_Engine.ipynb   # Main notebook
-├── README.md                        # Project documentation
-├── requirements.txt                 # Dependencies (if any)
-└── .gitignore                       # Ignored files
+├── NLP_Preprocessing_Engine.ipynb
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
-## 🔧 Core Functions
-1. Text Preprocessing
-```
+---
+
+## ⚙️ Core Functions
+
+### Text Preprocessing
+
+```python
 def preprocess_text(text):
     pass
 ```
-Handles:  
-- Cleaning text
-- Removing noise
-- Token generation
 
+**Responsibilities**
 
-2. Full Pipeline
-```
+* Text cleaning
+* Noise removal
+* Token generation
+* Normalization
+
+---
+
+### Complete NLP Pipeline
+
+```python
 def full_pipeline(text_list):
     pass
 ```
-Returns:
-- Clean tokens
-- Clean sentences
 
-  
-3. Token Analytics
-- Total tokens
-- Unique tokens
-- Average token length
+**Returns**
 
-  
-4. Frequency Analysis
-- Top 10 most frequent words
-- Top 5 least frequent words
+* Clean tokens
+* Clean sentences
+* Processed text output
 
-## 📊 Output Example
-Input:
-```
+---
+
+### Token Analytics
+
+The project calculates:
+
+* Total Tokens
+* Unique Tokens
+* Vocabulary Size
+* Average Token Length
+
+---
+
+### Frequency Analysis
+
+* Top 10 Most Frequent Words
+* Top 5 Least Frequent Words
+
+---
+
+## 📊 Example
+
+### Input
+
+```text
 I absolutely looooved this product 😍😍
-```
-Output:
-```
-Tokens: ['i', 'absolutely', 'loooved', 'this', 'product']
-Clean Sentence: i absolutely loooved this product
+Visit https://example.com
 ```
 
-## 🛠️ Tech Stack
-Python 3  
-Regular Expressions (re)  
-Collections (Counter)  
-Jupyter Notebook / Google Colab  
+### Output
+
+```text
+Tokens:
+['i', 'absolutely', 'looved', 'this', 'product']
+
+Clean Sentence:
+i absolutely looved this product
+```
+
+---
+
+## 💡 Applications
+
+This preprocessing engine can be integrated into:
+
+* Sentiment Analysis
+* Spam Detection
+* Text Classification
+* Chatbots
+* Document Analysis
+* Topic Modeling
+* Review Mining
+* Machine Learning Pipelines
+
+---
 
 ## 📌 Learning Outcomes
-NLP text preprocessing techniques
-Handling real-world noisy data
-Tokenization and normalization
-Building reusable pipelines
-Basic text analytics
+
+Through this project, the following NLP concepts were implemented and explored:
+
+* Text Cleaning
+* Text Normalization
+* Regular Expressions
+* Tokenization
+* Vocabulary Analysis
+* Frequency Analysis
+* Modular Pipeline Design
+* Data Preparation for Machine Learning
+
+---
+
+## 📌 Future Enhancements
+
+* Stopword Removal
+* Stemming
+* Lemmatization
+* Named Entity Recognition (NER)
+* Part-of-Speech (POS) Tagging
+* Language Detection
+* Spell Correction
+* Support for Multiple Languages
+* Integration with spaCy and NLTK
+
+---
+
+## 👨‍💻 About Me
+
+**Pranjal Salvi**
+
+Aspiring **Data Analyst & AI Engineer** passionate about Natural Language Processing, Machine Learning, Data Analytics, and Generative AI.
+
+### Connect with me
+
+* 🔗 LinkedIn: https://www.linkedin.com/in/pranjal-salvi-380732227/
+* 💻 GitHub: https://github.com/pranjalsalvi
+
+---
+
+## ⭐ Support
+
+If you found this project useful or interesting, consider giving it a ⭐ on GitHub.
+
+Your support motivates me to continue building and sharing AI, NLP, and Data Science projects.
+
+---
+
+### Thank you for visiting this repository! 🚀
